@@ -18,6 +18,8 @@ POST /transactions: A rota deve receber title, value e type dentro do corpo da r
 }
 
 GET /transactions: Essa rota deve retornar uma listagem com todas as transações que você cadastrou até agora, junto com o valor de soma de entradas, retiradas e total de crédito. Essa rota deve retornar um objeto com o formato a seguir:
+
+
 {
   "transactions": [
     {
@@ -51,6 +53,8 @@ GET /transactions: Essa rota deve retornar uma listagem com todas as transaçõe
     "total": 800
   }
 }
+
+
 Dica: Dentro de balance, o income é a soma de todos os valores das transações com type income. O outcome é a soma de todos os valores das transações com type outcome, e o total é o valor de income - outcome.
 
 Dica 2: Para fazer a soma dos valores, você pode usar a função reduce para agrupar as transações pela propriedade type, assim você irá conseguir somar todos os valores com facilidade e obter o retorno do balance.
